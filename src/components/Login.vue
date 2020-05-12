@@ -5,7 +5,8 @@
 export default {}
 </script>
 <style lang="less" scoped>
-/* .login-container {
+.login-container {
+  color: #fff;
   background: #2b4b6b;
-} */
+}
 </style>
