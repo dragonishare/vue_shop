@@ -1,9 +1,26 @@
 <template>
   <div class="login-container">
     <div class="login-box">
+      <!-- 头像区域 -->
       <div class="avatar-box">
         <img src="../assets/logo.png" alt="logo" />
       </div>
+      <!-- 登录表单区域 -->
+      <el-form label-width="0px" class="login-form">
+        <!-- 用户名 -->
+        <el-form-item>
+          <el-input></el-input>
+        </el-form-item>
+        <!-- 密码 -->
+        <el-form-item>
+          <el-input></el-input>
+        </el-form-item>
+        <!-- 按钮区域 -->
+        <el-form-item class="btns">
+          <el-button type="primary">登录</el-button>
+          <el-button type="info">重置</el-button>
+        </el-form-item>
+      </el-form>
     </div>
   </div>
 </template>
@@ -42,6 +59,17 @@ export default {}
       height: 100%;
       background: #eee;
       border-radius: 50%;
+    }
+  }
+  .login-form {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    .btns {
+      display: flex;
+      justify-content: flex-end;
     }
   }
 }
