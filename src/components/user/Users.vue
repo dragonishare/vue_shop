@@ -19,6 +19,16 @@
           <el-button type="primary">添加用户</el-button>
         </el-col>
       </el-row>
+      <!-- 用户列表区域 -->
+      <el-table :data="userList" border stripe>
+        <el-table-column type="index"></el-table-column>
+        <el-table-column label="姓名" prop="username"></el-table-column>
+        <el-table-column label="邮箱" prop="email"></el-table-column>
+        <el-table-column label="电话" prop="mobile"></el-table-column>
+        <el-table-column label="角色" prop="role_name"></el-table-column>
+        <el-table-column label="状态" prop="mg_state"></el-table-column>
+        <el-table-column label="操作"></el-table-column>
+      </el-table>
     </el-card>
   </div>
 </template>
@@ -45,7 +55,7 @@ export default {
       if (res.meta.status !== 200) {
         return this.$message.error('获取用户列表失败！')
       }
-      this.userList = res.data.userList
+      this.userList = res.data.users
       this.total = res.data.total
     }
   }
